@@ -42,6 +42,7 @@ open class MSCollectionViewCellPeekingLayout: UICollectionViewLayout {
     }
 
     var numberOfItems: Int {
+        guard collectionView?.numberOfSections ?? 0 > 0 else { return 0 }
         return collectionView?.numberOfItems(inSection: 0) ?? 0
     }
 
